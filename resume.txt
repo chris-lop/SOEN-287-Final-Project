@@ -1,0 +1,1 @@
+Concordia, comp sci|smart, great|award1, award2, award3|exp1, desc1, exp2, desc2|ref1, desc1, ref2, desc2|, steve jobs, email|n|Reference 1, Description, Reference 2, Description||||||concordia, computer science|smart, very smart|deans1, deans2, hackathon3|facebook, software engineer, amazon, ceo|jeff bezos, email, steve jobs, billionaire|

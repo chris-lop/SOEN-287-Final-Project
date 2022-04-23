@@ -1,0 +1,124 @@
+body { 
+    margin: 0;
+    padding-top: 60px;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+.navbar li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #111;
+}
+
+.navbar .active {
+    background-color: #04AA6D;
+  }
+
+.self-portrait {
+    display: flex;
+    justify-content: center;
+}
+
+.professional-statement {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.summary {
+    text-align: justify;
+}
+
+.education dl {
+    text-align: left;
+}
+
+.education ul {
+    margin-top: auto;
+}
+
+.skills dl {
+    text-align: left;
+}
+
+.awards ol {
+    text-align: left;
+}
+
+.experience ol {
+    text-align: left;
+}
+
+.references ul {
+    text-align: left;
+}
+
+.download-cv button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #04AA6D;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+}
+
+.projects ol {
+    text-align: justify;
+}
+
+.contact-me input {
+    text-align: left;
+}
+
+.contact-me textarea {
+    text-align: left;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.login-input {
+    text-align: justify;
+}
+
+.login-button {
+ text-align: center;
+}
+
+.login-button input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    cursor: pointer;
+}

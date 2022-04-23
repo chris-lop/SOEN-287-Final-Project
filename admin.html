@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="resume.php">Resume</a></li>
+                <li><a href="projects.php">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="social.php">Social</a></li>
+                <li><a class="active" href="admin.html">Admin</a></li>
+            </ul>
+        </div>
+        <div class="login-page">
+            <h1>ADMIN LOGIN PAGE</h1>
+            <form>
+                <div class="login-input">
+                    <label for="uname">Username</label><br>
+                    <input type="text" id= "uname" name="uname"><br><br>
+                    <label for="psw">Password</label><br>
+                    <input type="password" id="psw" name="psw"><br><br>
+                    <div class="login-button">
+                        <input type="reset" value="Login" onClick="processLogin()">
+                    </div>
+                </div>
+              </form>
+        </div>
+        <script>
+            function processLogin() {
+                var username = document.getElementById('uname').value;
+                var password = document.getElementById('psw').value;
+                
+                // console.log(username);
+                // console.log(password);
+                
+                const user1 = "chris@gmail.com";
+                const u1password = "password";
+                
+                sessionStorage.setItem('SessionUname',username);
+                sessionStorage.setItem('SessionPword',password);
+    
+                if(user1 === sessionStorage.getItem("SessionUname") && u1password === sessionStorage.getItem("SessionPword"))
+                {
+                    console.log("nice");
+                    
+
+
+                    var today = new Date();
+                    var dd = String(today.getDate()).padStart(2, '0');
+                    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                    var yyyy = today.getFullYear();
+                    var hr = today.getHours();
+                    var min = today.getMinutes();
+                    var sec = today.getSeconds();
+
+
+                    today = mm + '/' + dd + '/' + yyyy + ' ' + hr + ':' + min + ':' + sec;
+                    
+                    sessionStorage.setItem('LoginTime', today);
+
+                    window.location.href = '/A03/adminIndex.php'; 
+
+                }
+                
+                else
+                {
+                    alert("Wrong Username or Password!");
+                }
+                };
+            </script>
+    </body>
+</html>
+    

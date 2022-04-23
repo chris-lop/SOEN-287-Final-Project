@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="resume.php">Resume</a></li>
+                <li><a href="projects.php">Projects</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li><a href="social.php">Social</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </div>
+        <div class="contact-me">
+            <h1>CONTACT ME</h1>
+            <h4>If you wish to contact me regarding any opportunities, please use the form below.</h4>
+            <h4>You can also contact me at my email, christopherlop12@gmail.com</h4>
+            <h4>or my phone number, 514-619-0412</h4><br>
+            <form>
+                <label for="name">Full name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="yourname@gmail.com"><br><br>
+                <label for="phone">Phone number:</label><br>
+                <input type="tel" placeholder="514-123-1234" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+                <textarea id="message" name="message" rows="4" cols="50">Write message here</textarea><br><br>
+                <input type="submit" value="Submit" onClick="submitContactMsg()">
+            </form>
+        </div>
+    </body>
+</html>
+
+<script>
+    function submitContactMsg() {
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const message = document.getElementById('message');
+
+    let data =
+        'Name: ' + name.value + '\r\n'+
+        'Email: ' + email.value + '\r\n'+
+        'Phone: ' + phone.value + '\r\n'+
+        'Message: ' + message.value;
+    
+    const blob = new Blob([data], { type: 'text/plain' });
+    var url = window.URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.download = "messages.txt";
+    a.href = window.URL.createObjectURL(blob);
+    a.target = "blank";
+    a.style.display = "none"
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+</script>
+    

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Page</title>
+        <link rel="stylesheet" href="adminStyle.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="adminIndex.php">Home</a></li>
+                <li><a href="adminResume.php">Resume</a></li>
+                <li><a href="adminProjects.php">Projects</a></li>
+                <li><a href="adminContact.html">Contact</a></li>
+                <li><a href="adminSocial.php">Social</a></li>
+                <li><a class="active" href="adminLogout.html">Logout</a></li>
+            </ul>
+        </div>
+        <input type="reset" value="Logout" onClick="processLogout()">
+    </body>
+    <script>
+        function processLogout() {
+            sessionStorage.clear();
+            window.location.href = '/A03/index.php'; 
+        };
+    </script>
+</html>
+    

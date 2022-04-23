@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Page</title>
+        <link rel="stylesheet" href="adminStyle.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="adminIndex.php">Home</a></li>
+                <li><a href="adminResume.php">Resume</a></li>
+                <li><a href="adminProjects.php">Projects</a></li>
+                <li><a class="active" href="adminContact.html">Contact</a></li>
+                <li><a href="adminSocial.php">Social</a></li>
+                <li><a href="adminLogout.html">Logout</a></li>
+            </ul>
+        </div>
+        <table>
+            <tr>
+                <td>&nbsp;</td>
+                <td><b>Message Window</b></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <textarea id="displayWin" cols="100" rows="25"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:right;">Select a File to Upload:</td>
+                <td><input type="file" id="uploadFile"></td>
+                <td>&nbsp;<td>
+            </tr>
+            <tr>
+                <td style="text-align:right;">ReadMessage:</td>
+                <td><button onclick="readMessages()">Click to Upload</button></td>
+                <td>&nbsp;<td>
+            </tr>
+        </table>
+    </body>
+</html>
+    
